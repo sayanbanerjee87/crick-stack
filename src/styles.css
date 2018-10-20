@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.row{
+	flex: 1;
+}
+.main-container{
+	height: 100%;
+}
+
+ul,li{
+	list-style-type: none; 
+}
+
+a{
+	text-decoration: none;
+}
+
+.active{
+	border-bottom: 3px solid #1f38c5;
+}
