@@ -1,0 +1,20 @@
+<div class="players-container">
+	<ul class = "players-list flex-column" *ngIf = "rating && rating.players">
+		<li>
+			<ul class="flex-row">
+				<li class="flex-4"><span>{{'Player'}}</span></li>
+				<li class="flex-1 center-align"><span>{{'Test'}}</span></li>
+				<li class="flex-1 center-align"><span>{{'ODI'}}</span></li>
+				<li class="flex-1 center-align"><span>{{'T20I'}}</span></li>
+			</ul>
+		</li>
+		<li *ngFor = "let player of rating.players" class = "">
+			<ul class = "flex-row">
+				<li class="flex-4" (click) = "openPlayerDetails($event, player)"><span>{{player.name}}</span></li>
+				<li class="flex-1 center-align"><span>{{player.test}}</span></li>
+				<li class="flex-1 center-align"><span>{{player.odi}}</span></li>
+				<li class="flex-1 center-align"><span>{{player.t20}}</span></li>
+			</ul>
+		</li>
+	</ul>
+</div>

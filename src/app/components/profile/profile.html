@@ -1,0 +1,54 @@
+<div class="profile-container">
+	<ul class="profile-panel">
+		<li class="image-container flex-row" [ngClass] = "{'white-background': !_playerInfo.imageURL}">
+			<img src = "{{_playerInfo.imageURL}}" />
+			<ul class="flex-column">
+				<li class = "font-36"><span>{{_playerInfo.fullName}}</span></li>
+				<li class = "font-24"><span>{{_playerInfo.country}}</span></li>
+				<li><span>{{_playerInfo.battingStyle}}</span></li>
+				<li><span>{{_playerInfo.bowlingStyle}}</span></li>
+				<li><span>{{_playerInfo.currentAge}}</span></li>
+				
+			</ul>
+		</li>
+		<li class="paragraph-container">
+			<p>{{_playerInfo.profile}}</p>
+		</li>
+	</ul>
+	<ul class="profile-panel batting-records">
+		<!-- <h2>{{'Batting'}}</h2> -->
+		<li class="header-column flex-1">
+			<ul>
+				<span>{{'Batting'}}</span>
+			</ul>
+			<ul *ngFor = "let item of _playerInfo.data.batting.ODIs | keyvalue">
+				<span>{{item.key}}</span>
+			</ul>
+		</li>
+		<li class = "tests-record-batting flex-1" *ngIf="_playerInfo.data.batting.tests">
+			<ul>
+				<span>{{'Test'}}</span>
+			</ul>
+			<ul *ngFor = "let item of _playerInfo.data.batting.tests | keyvalue">
+				<span>{{item.value}}</span>
+			</ul>
+		</li>
+		<li class = "odi-record-batting flex-1" *ngIf="_playerInfo.data.batting.ODIs">
+			<ul>
+				<span>{{'ODIs'}}</span>
+			</ul>
+			<ul *ngFor = "let item of _playerInfo.data.batting.ODIs | keyvalue">
+				<span>{{item.value}}</span>
+			</ul>
+		</li>
+		<li class = "t20-record-batting flex-1" *ngIf="_playerInfo.data.batting.T20Is">
+			<ul>
+				<span>{{'T20Is'}}</span>
+			</ul>
+			<ul *ngFor = "let item of _playerInfo.data.batting.T20Is | keyvalue">
+				<span>{{item.value}}</span>
+			</ul>
+		</li>
+	</ul>
+	<ul class="profile-panel"></ul>
+</div>

@@ -1,5 +1,5 @@
 <div class="container">
-	<div class = "home-panel row">
+	<div class = "home-panel tree-panel">
 		<ul class="tab-links-container">
 			<li class="tab-link" *ngFor = "let tab of tabList; let i = index" [ngClass] = "{'active': tab.isActive}" (click) = "activateLink(i)">
 				<a>{{tab.name}}</a>
@@ -9,12 +9,12 @@
 			<tree-view [treeData] = "dataSet" (playerDetails) = "displayDetailedStats($event)"></tree-view>
 		</ul>
 	</div>
-	<div class = "home-panel row">
+	<div class = "home-panel detail-panel">
 		<ul *ngIf = "playerDetail">
-			{{playerDetail.profile}}
+			<player-detail [playerInfo] = "playerDetail"></player-detail>
 		</ul>
 	</div>
-	<div class = "home-panel row">
-		How are you
+	<div class = "home-panel form-panel">
+		<player-ratings (playerDetails) = "displayDetailedStats($event)"></player-ratings>
 	</div>
 </div>

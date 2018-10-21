@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { TeamNames } from './../../models/teams.model';
+import { Players } from './../../models/players.model';
 
 
 @Injectable()
@@ -19,7 +20,7 @@ export class FetchResultService{
 		return this.http.get<TeamNames>(this.rolesUrl);
 	}
 
-	getPlayers(url: string): Observable<Object>{
-		return this.http.get<Object>(url);
+	getPlayers(url: string): Observable<Players>{
+		return this.http.get<Players>(url);
 	}
 }

@@ -10,12 +10,16 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HomeComponent } from './modules/home/home.component';
 import { MaterialModule } from './material.module';
 import { TreeView } from './components/tree/tree.component';
+import { ProfileDetail } from './components/profile/profile.component';
+import { RatedPlayers } from './components/ratings/rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TreeView
+    TreeView,
+    ProfileDetail,
+    RatedPlayers
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,35 @@ a{
 	text-decoration: none;
 }
 
+.font-36{
+	font-size: 36px;
+}
+.font-24{
+	font-size: 24px;
+}
 .active{
 	border-bottom: 3px solid #1f38c5;
+}
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+.flex-column{
+	display: flex;
+	flex-direction: column;
+}
+.flex-1{
+	flex: 1;
+}
+.flex-2{
+	flex: 2;
+}
+.flex-3{
+	flex: 3;
+}
+.flex-4{
+	flex: 4;
+}
+.center-align{
+	text-align: center;
 }

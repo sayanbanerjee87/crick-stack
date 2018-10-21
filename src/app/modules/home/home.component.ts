@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TeamNames } from './../../models/teams.model';
 import { FetchResultService } from './fetchResults.service';
+import { Players } from './../../models/players.model';
 // import { PlayersListService } from './players.service';
 
 @Component({
@@ -28,9 +29,11 @@ export class HomeComponent{
 	private sub;
 	private tabName: string;
 	private dataSet: TeamNames;
-	private playerDetail: Object;
+	private playerDetail: Players;
 
-	constructor(private fetchList: FetchResultService){}
+	constructor(private fetchList: FetchResultService){
+		this.activateLink(0);
+	}
 
 	activateLink(index: number){
 		let len = this.tabList.length;

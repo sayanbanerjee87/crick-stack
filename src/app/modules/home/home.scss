@@ -1,28 +1,36 @@
 .container{
 	display: flex;
 	flex-direction: row;
-	height: 100%;
+	min-height: 100%;
 	ul{
 		padding-left: 0;
 	}
+	.home-panel{
+		background: #072354;
+		color: #d6d6d6;
+	}
+	.home-panel:nth-child(1){
+	    opacity: .8;
+	    flex: 2;
+	    border-right: 1px outset #d6d6d6;
+	}
 	.home-panel:nth-child(2){
-		background: #bbb;
+	    opacity: .9;
+	    flex: 3;
+	    border-right: 1px outset #d6d6d6;
 	}
 	.home-panel:nth-child(3){
-		background: #000;
+	    opacity: .8;
+	    flex: 2;
 	}
 	.tab-links-container{
-		box-shadow: 0px 1px 0px 0px #e3e4e4;
+		box-shadow: 0px 2px 0px 0px #c0c3c3;
 		.tab-link{
-			opacity: .6;
+			opacity: .8;
 			font-weight: 500;
 			display: inline-block;
 			width: 20%;
     		text-align: center;
-
-    		a{
-    			color: #2a2a2b;
-    		}
 		}
 	}
 

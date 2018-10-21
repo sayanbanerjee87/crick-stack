@@ -1,0 +1,22 @@
+.players-container{
+
+	ul{
+		padding-left: 0;
+	}
+
+	.players-list{
+
+		.flex-row{
+
+			& >li:nth-child(1){
+				padding-left: 10px;
+			}
+
+			& >li{
+				padding-bottom: 12px;
+    			padding-top: 8px;
+    			box-shadow: 0px 1px 0px 0px #ded9d9;
+			}
+		}
+	}
+}
