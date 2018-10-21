@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Add Players</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="form-container flex-column">
+	  <mat-form-field>
+	    <input matInput placeholder="Name of the player">
+	  </mat-form-field>
+
+	  <mat-form-field>
+	    <textarea matInput placeholder="Add profile of the player"></textarea>
+	  </mat-form-field>
+
+	  <mat-form-field>
+	    <mat-select placeholder="Select role for the player">
+	      <mat-option value="batsman">Batsman</mat-option>
+	      <mat-option value="bowler">Bowler</mat-option>
+	      <mat-option value="keeper">Wicket Keeper</mat-option>
+	      <mat-option value="allrounder">All Rounder</mat-option>
+	    </mat-select>
+	  </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

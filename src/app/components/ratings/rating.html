@@ -1,6 +1,9 @@
 <div class="players-container">
 	<ul class = "players-list flex-column" *ngIf = "rating && rating.players">
 		<li>
+			<button mat-button (click)="openDialog()">Open dialog</button>
+		</li>
+		<li>
 			<ul class="flex-row">
 				<li class="flex-4"><span>{{'Player'}}</span></li>
 				<li class="flex-1 center-align"><span>{{'Test'}}</span></li>

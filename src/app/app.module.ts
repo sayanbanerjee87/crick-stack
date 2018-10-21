@@ -12,6 +12,7 @@ import { MaterialModule } from './material.module';
 import { TreeView } from './components/tree/tree.component';
 import { ProfileDetail } from './components/profile/profile.component';
 import { RatedPlayers } from './components/ratings/rating.component';
+import { DialogContentDialog } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RatedPlayers } from './components/ratings/rating.component';
     HomeComponent,
     TreeView,
     ProfileDetail,
-    RatedPlayers
+    RatedPlayers,
+    DialogContentDialog
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { RatedPlayers } from './components/ratings/rating.component';
     )
   ],
   providers: [],
+  entryComponents: [DialogContentDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
