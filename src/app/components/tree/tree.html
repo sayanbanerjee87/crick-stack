@@ -1,0 +1,12 @@
+<div *ngIf = "_treeData">
+	<ul class="top-level">
+		<li class="top-items" *ngFor = "let item of _treeData.firstLevel" (click) = "item.isExpanded = !item.isExpanded">
+			<a title = "{{item.name}}">{{item.name}}</a>
+			<ul class="second-level" *ngIf = "item.players && item.players.length && item.isExpanded">
+				<li class="inner-items" *ngFor="let player of item.players" (click) = "openPlayerDetails($event, player)">
+					<a title = "{{player.name}}">{{player.name}}</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>

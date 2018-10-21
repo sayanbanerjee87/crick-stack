@@ -2,15 +2,17 @@
 	<div class = "home-panel row">
 		<ul class="tab-links-container">
 			<li class="tab-link" *ngFor = "let tab of tabList; let i = index" [ngClass] = "{'active': tab.isActive}" (click) = "activateLink(i)">
-				<a [routerLink] = "['details', tab.link]">{{tab.name}}</a>
+				<a>{{tab.name}}</a>
 			</li>
 		</ul>
-		<ul>
-			<router-outlet></router-outlet>
+		<ul *ngIf = "dataSet">
+			<tree-view [treeData] = "dataSet" (playerDetails) = "displayDetailedStats($event)"></tree-view>
 		</ul>
 	</div>
 	<div class = "home-panel row">
-		I am here
+		<ul *ngIf = "playerDetail">
+			{{playerDetail.profile}}
+		</ul>
 	</div>
 	<div class = "home-panel row">
 		How are you

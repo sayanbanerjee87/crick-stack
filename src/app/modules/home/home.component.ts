@@ -1,10 +1,14 @@
 
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { TeamNames } from './../../models/teams.model';
+import { FetchResultService } from './fetchResults.service';
+// import { PlayersListService } from './players.service';
 
 @Component({
 	templateUrl: './home.html',
-	styleUrls: ['home.scss']
+	styleUrls: ['home.scss'],
+	providers: [FetchResultService]
 })
 
 export class HomeComponent{
@@ -21,10 +25,20 @@ export class HomeComponent{
 		id: "tab21",
 		isActive: false
 	}];
+	private sub;
+	private tabName: string;
+	private dataSet: TeamNames;
+	private playerDetail: Object;
+
+	constructor(private fetchList: FetchResultService){}
 
 	activateLink(index: number){
 		let len = this.tabList.length;
-
+		this.tabName=this.tabList[index].link;
+		this.fetchList[this.tabName+'List']()
+		.subscribe(res => {
+			this.dataSet = res;
+		});
 		for(let i=0; i< len; i++){
 			if(i === index){
 				this.tabList[i].isActive = true;
@@ -32,5 +46,12 @@ export class HomeComponent{
 				this.tabList[i].isActive = false;
 			}
 		}
+	}
+
+	displayDetailedStats(player){
+		this.fetchList.getPlayers(`./assets/resources/players/${player.id}.json`)
+		.subscribe(res => {
+			this.playerDetail = res;
+		})
 	}
 }

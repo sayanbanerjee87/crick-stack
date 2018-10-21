@@ -1,0 +1,67 @@
+{
+  "firstLevel":[{
+    "name": "Batsman",
+    "isExpanded": false,
+    "key":1,
+    "players":[{
+      "name":"Aaron Finch",
+      "id": "5334",
+      "country": "Australia"
+    },{
+      "name":"David Warner",
+      "id": "1124345",
+      "country": "Australia"
+    },{
+      "name":"Steven Smith",
+      "id": "112366",
+      "country": "Australia"
+    },{
+      "name":"Virat Kohli",
+      "id":"253802",
+      "country": "India"
+    },{
+      "name":"Rohit Sharma",
+      "id":"001235",
+      "country": "India"
+    }]
+  },{
+    "name": "Wicket-Keeper",
+    "isExpanded": false,
+    "key":2,
+    "players":[{
+      "name":"Risabh Pant",
+      "id":"001289",
+      "country": "India"
+    },{
+      "name":"M.S.Dhoni",
+      "id":"001235",
+      "country": "India"
+    },{
+      "name":"Jose Buttler",
+      "id":"1255546",
+      "country": "England"
+    },{
+      "name":"Sarfaraz Ahmed",
+      "id":"3321234",
+      "country": "Pakistan"
+    }]
+  },{
+    "name": "Bowlers",
+    "isExpanded": false,
+    "key":4,
+    "players":[{
+      "name":"Jasprit Bumrah",
+      "id":"001277",
+      "country": "India"
+    },{
+      "name":"Kuldeep yadav",
+      "id":"001283",
+      "country": "India"
+    }]
+  },{
+    "name": "All Rounders",
+    "isExpanded": false,
+    "key":5,
+    "players":[]
+  }]
+}
