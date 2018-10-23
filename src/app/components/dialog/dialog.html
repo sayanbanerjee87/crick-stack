@@ -1,30 +1,32 @@
 <h2 mat-dialog-title>Add Players</h2>
 <mat-dialog-content class="mat-typography">
-  <div class="form-container flex-column">
-	  <mat-form-field>
-	    <input matInput placeholder="Name of the player">
-	  </mat-form-field>
+	<form action=""  name = "player">
+		<div class="form-container flex-column">
+		  <mat-form-field>
+		    <input matInput placeholder="Name of the player" [(ngModel)] = "playerName" name = "playerName">
+		  </mat-form-field>
 
-	  <mat-form-field>
-	    <textarea matInput placeholder="Add profile of the player"></textarea>
-	  </mat-form-field>
+		  <mat-form-field>
+		    <textarea matInput placeholder="Add profile of the player" [(ngModel)]="profile" name = "profile"></textarea>
+		  </mat-form-field>
 
-	  <mat-form-field>
-	    <mat-select placeholder="Select role for the player">
-	      <mat-option value="batsman">Batsman</mat-option>
-	      <mat-option value="bowler">Bowler</mat-option>
-	      <mat-option value="keeper">Wicket Keeper</mat-option>
-	      <mat-option value="allrounder">All Rounder</mat-option>
-	    </mat-select>
-	  </mat-form-field>
-	  <mat-form-field *ngIf="teamsList">
-	    <mat-select placeholder="Please select residing country for the player" >
-	      <mat-option value="{{team.name}}" *ngFor = "let team of teamsList.firstLevel" title = "{{team.name}}">{{team.name}}</mat-option>
-	    </mat-select>
-	  </mat-form-field>
-  </div>
+		  <mat-form-field>
+		    <mat-select placeholder="Select role for the player" [(ngModel)]="role" name = "role">
+		      <mat-option value="batsman">Batsman</mat-option>
+		      <mat-option value="bowler">Bowler</mat-option>
+		      <mat-option value="keeper">Wicket Keeper</mat-option>
+		      <mat-option value="allrounder">All Rounder</mat-option>
+		    </mat-select>
+		  </mat-form-field>
+		  <mat-form-field *ngIf="teamsList">
+		    <mat-select placeholder="Please select residing country for the player" [(ngModel)]="teams" name="teams">
+		      <mat-option value="{{team.name}}" *ngFor = "let team of teamsList.firstLevel" title = "{{team.name}}">{{team.name}}</mat-option>
+		    </mat-select>
+		  </mat-form-field>
+	  </div>
+	</form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click) = "savePlayer()" >Save</button>
 </mat-dialog-actions>

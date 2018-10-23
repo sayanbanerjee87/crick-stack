@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { TeamNames } from './../../models/teams.model';
 import { Players } from './../../models/players.model';
@@ -15,11 +15,32 @@ export class FetchResultService{
 	constructor(private http: HttpClient){}
 
 	teamsList(): Observable<TeamNames>{
-		return this.http.get<TeamNames>(this.teamUrl);
+		if(localStorage.getItem('teamNames')){
+			//let teams: Observable<TeamNames>;
+			//teams = JSON.parse(localStorage.getItem('teamNames'));
+			return of(JSON.parse(localStorage.getItem('teamNames')))
+
+		}else{
+			return this.http.get<TeamNames>(this.teamUrl)
+			.pipe(map(res => {
+				localStorage.setItem('teamNames', JSON.stringify(res));
+				return res;
+			}));
+		}	
 	}
 
 	rolesList(): Observable<TeamNames>{
-		return this.http.get<TeamNames>(this.rolesUrl);
+		if(localStorage.getItem('playersRoles')){
+			let roles: Observable<TeamNames>;
+			//roles = JSON.parse(localStorage.getItem('playersRoles'));
+			return of(JSON.parse(localStorage.getItem('playersRoles')))
+		}else{
+			return this.http.get<TeamNames>(this.rolesUrl)
+			.pipe(map(res => {
+				localStorage.setItem('playersRoles',JSON.stringify(res));
+				return res;
+			}));
+		}
 	}
 
 	getPlayers(url: string): Observable<Players>{

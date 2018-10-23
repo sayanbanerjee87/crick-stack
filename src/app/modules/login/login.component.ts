@@ -34,4 +34,9 @@ export class LoginComponent{
 			console.log("error!!")
 		})
 	}
+
+	onCancel(){
+		this.userName = '';
+		this.password = '';
+	}
 }
