@@ -5,7 +5,8 @@ import { NeedAuthGuard } from './common/auth-helper/auth.guard';
 export const appRoutes = [{
 	path: "home",
 	component: HomeComponent,
-	canActivate: [NeedAuthGuard]
+	canActivate: [NeedAuthGuard],
+	runGuardsAndResolvers: 'always',
 },
 {
 	path: "login",

@@ -36,6 +36,9 @@ export class AuthService{
 
     logout(): boolean{
     	localStorage.removeItem("currentUser");
+    	localStorage.removeItem("playersRatings");
+    	localStorage.removeItem("teamNames");
+    	localStorage.removeItem("playersRoles");
     	return true;
     }
 }

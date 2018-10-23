@@ -41,7 +41,7 @@ import { HeaderComponent } from './components/header/header.component';
     ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: true, onSameUrlNavigation: 'reload' } // <-- debugging purposes only
     )
   ],
   providers: [FetchResultService, NeedAuthGuard],

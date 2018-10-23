@@ -16,6 +16,11 @@
 		<ul *ngIf = "playerDetail">
 			<player-detail [playerInfo] = "playerDetail"></player-detail>
 		</ul>
+		<ul class = "no-profile" *ngIf = "!playerDetail">
+			<div class = "no-profile-message">
+				<span>{{'Nothing Selected'}}</span>
+			</div>
+		</ul>
 	</div>
 	<div class = "home-panel form-panel">
 		<player-ratings (playerDetails) = "displayDetailedStats($event)"></player-ratings>

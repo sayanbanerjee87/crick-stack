@@ -14,6 +14,22 @@
 	.home-panel{
 		background: #072354;
 		color: #d6d6d6;
+
+		.no-profile{
+			position: relative;
+			margin-top: 0;
+			height: 100%;
+
+			.no-profile-message{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-60%);
+				font-size: 22px;
+				font-family: 'Roboto';
+				text-shadow: 4px 4px #000;
+			}
+		}
 	}
 	.home-panel:nth-child(1){
 	    opacity: .8;
