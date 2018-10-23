@@ -56,7 +56,7 @@ export class DialogContentDialog implements OnInit{
         	"odi": "-",
         	"t20": "-"
         })
-        for(let k=0;  k<teams.firstLevel.length; k++{
+        for(let k=0;  k<teams.firstLevel.length; k++){
         	if(teams.firstLevel[k].name === this.teams){
         		teams.firstLevel[k].players.push({
         			"name": this.playerName,

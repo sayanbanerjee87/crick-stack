@@ -51,7 +51,7 @@ export class HomeComponent{
 	}
 
 	displayDetailedStats(player){
-		this.fetchList.getPlayers(`./assets/resources/players/${player.id}.json`)
+		this.fetchList.getPlayers(`./assets/resources/players/${player.country}/${player.id}.json`)
 		.subscribe(res => {
 			this.playerDetail = res;
 		})

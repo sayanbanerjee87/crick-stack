@@ -40,78 +40,30 @@
       "country": "India"
     },{
       "name":"Rohit Sharma",
-      "id":"34102",
+      "id":"001235",
       "country": "India"
     },{
       "name":"M.S.Dhoni",
       "id":"28081",
-      "country": "India"
-    },{
-      "name":"Virender Sehwag",
-      "id":"35263",
-      "country": "India"
-    },{
-      "name":"Sourav Ganguly",
-      "id":"28779",
-      "country": "India"
-    },{
-      "name":"Yuvraj Singh",
-      "id":"36084",
-      "country": "India"
-    },{
-      "name":"Sachin Tendulkar",
-      "id":"35320",
       "country": "India"
     }]
   },{
     "name": "Pakistan",
     "isExpanded": false,
     "key":5,
-    "players":[{
-      "name":"Babar Azam",
-      "id":"348144",
-      "country": "Pakistan"
-    },{
-      "name":"Abdul Razzaq",
-      "id":"39836",
-      "country": "Pakistan"
-    },{
-      "name":"Inzamam-ul-Haq",
-      "id":"40570",
-      "country": "Pakistan"
-    },{
-      "name":"Shahid Afridi",
-      "id":"42639",
-      "country": "Pakistan"
-    }]
+    "players":[]
   },{
     "name": "Sri Lanka",
     "isExpanded": false,
     "key":6,
-    "players":[{
-      "name":"Sanath Jayasuriya",
-      "id":"49209",
-      "country": "Sri Lanka"
-    },{
-      "name":"Mahela Jayawardene",
-      "id":"49289",
-      "country": "Sri Lanka"
-    },{
-      "name":"Angelo Mathews",
-      "id":"49764",
-      "country": "Sri Lanka"
-    },{
-      "name":"Kumar Sangakkara",
-      "id":"50710",
-      "country": "Sri Lanka"
-    }]
+    "players":[]
   },{
-    "name": "Windies",
+    "name": "West Indies",
     "isExpanded": false,
     "key":7,
     "players":[]
   },{
-    "name": "New zealand",
+    "name": "Zimbabwe",
     "isExpanded": false,
     "key":8,
     "players":[]

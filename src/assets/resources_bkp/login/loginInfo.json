@@ -1,0 +1,14 @@
+{
+	"user_detail":[{
+		"userName": "sayan",
+		"password": "12345",
+		"role": "admin",
+		"token": "fake-token"
+	},
+	{
+		"userName": "sample",
+		"password": "12345",
+		"role": "standard",
+		"token": "dummy-token"
+	}]
+}
