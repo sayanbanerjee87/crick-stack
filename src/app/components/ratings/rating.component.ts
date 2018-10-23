@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {MatDialog} from '@angular/material';
+import { MatDialog } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 import { FetchRatedPlayers } from './fetch.service';
 import { RatedPlayer } from "./../../models/rating.model";
 import { DialogContentDialog } from "./../../components/dialog/dialog.component";
@@ -14,6 +15,7 @@ import { DialogContentDialog } from "./../../components/dialog/dialog.component"
 
 export class RatedPlayers implements OnInit{
 	private rating: RatedPlayer;
+	private isAdminUser: boolean;
 	constructor(private ftchPlayers: FetchRatedPlayers, public dialog: MatDialog){
 
 	}
@@ -29,6 +31,8 @@ export class RatedPlayers implements OnInit{
 	}
 
 	ngOnInit(){
+		let userDetail = JSON.parse(localStorage.getItem("currentUser"));
+		this.isAdminUser = userDetail && userDetail.role === 'admin' ? true : false;
 		this.ftchPlayers.getRatedPlayers()
 		.subscribe(res => this.rating = res);
 	}

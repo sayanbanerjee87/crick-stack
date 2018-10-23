@@ -1,0 +1,20 @@
+<section class="form-section">
+    <form class = "form-container flex-column" name = "login">
+        <div class="form-header">
+            <label>Login</label>
+        </div>
+         <div class=" flex-column login-section">
+              <mat-form-field>
+                <input matInput placeholder="User Name" [(ngModel)] = "userName" name = "user">
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="Password" type = "password" [(ngModel)] = "password" name = "pswd">
+              </mat-form-field>
+          </div>
+          <div class="button-holder button-section">
+            <button mat-raised-button color="basic">Cancel</button>
+            <button mat-raised-button color="primary" (click) = "onSubmit()">Submit</button>
+          </div>
+    </form>
+</section>

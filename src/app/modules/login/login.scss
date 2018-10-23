@@ -1,0 +1,38 @@
+.form-section{
+	position: relative;
+	height: 100%;
+	background: rgba(7, 35, 84,.6);
+	.form-header{
+		text-align: center;
+	    font-size: 28px;
+	    font-weight: 600;
+	    font-family: 'Roboto';
+	    color: #0f76a2;
+	    margin-top: 5px;
+	    text-shadow: 3px 2px #a79f9f;
+	}
+	.form-container{
+		width: 20%;
+	    background: #fff;
+	    top: 50%;
+	    left: 50%;
+	    position: absolute;
+	    transform: translate(-50%,-60%);
+	    padding: 0px 20px;
+	    height: 300px;
+	    border-radius: 8px;
+	    box-shadow: 1px 1px 1px 1px #000000;
+	}
+}
+.login-section, .button-section{
+	position: relative;
+	margin-top: 30px;
+}
+
+.button-holder{
+	text-align: right;
+
+	& >button{
+		margin-right: 10px;
+	}
+}

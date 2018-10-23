@@ -2,14 +2,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TeamNames } from './../../models/teams.model';
-import { FetchResultService } from './fetchResults.service';
+import { FetchResultService } from './../../common/service/fetchResults.service';
 import { Players } from './../../models/players.model';
 // import { PlayersListService } from './players.service';
 
 @Component({
 	templateUrl: './home.html',
-	styleUrls: ['home.scss'],
-	providers: [FetchResultService]
+	styleUrls: ['home.scss']
 })
 
 export class HomeComponent{

@@ -1,18 +1,25 @@
 <div class="players-container">
 	<ul class = "players-list flex-column" *ngIf = "rating && rating.players">
-		<li>
-			<button mat-button (click)="openDialog()">Open dialog</button>
+		<li class = "player-list-header flex-row">
+			<ul class = "flex-3 search-box-container">
+				<li>
+					<input type="text" class = "search-box" placeholder="Please enter player name" [(ngModel)]="searchText" />
+				</li>
+			</ul>
+			<ul class="flex-1 center-align" *ngIf = "isAdminUser">
+				<mat-icon class= "add-icon" (click) = "openDialog()" title = "Add Player">add_circle</mat-icon>
+			</ul>
 		</li>
 		<li>
-			<ul class="flex-row">
+			<ul class="flex-row grid-list">
 				<li class="flex-4"><span>{{'Player'}}</span></li>
 				<li class="flex-1 center-align"><span>{{'Test'}}</span></li>
 				<li class="flex-1 center-align"><span>{{'ODI'}}</span></li>
 				<li class="flex-1 center-align"><span>{{'T20I'}}</span></li>
 			</ul>
 		</li>
-		<li *ngFor = "let player of rating.players" class = "">
-			<ul class = "flex-row">
+		<li *ngFor = "let player of rating.players | filter: searchText" class = "">
+			<ul class = "flex-row grid-list">
 				<li class="flex-4" (click) = "openPlayerDetails($event, player)"><span>{{player.name}}</span></li>
 				<li class="flex-1 center-align"><span>{{player.test}}</span></li>
 				<li class="flex-1 center-align"><span>{{player.odi}}</span></li>

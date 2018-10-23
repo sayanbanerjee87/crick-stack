@@ -6,7 +6,9 @@ import { TeamNames } from './../../models/teams.model';
 import { Players } from './../../models/players.model';
 
 
-@Injectable()
+@Injectable({
+	providedIn: 'root'
+})
 export class FetchResultService{
 	private teamUrl = "./assets/resources/testTeam.json";
 	private rolesUrl = "./assets/resources/roles.json";
