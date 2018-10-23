@@ -1,0 +1,10 @@
+<div class="header-holder">
+	<ul class = "header-parent flex-row">
+		<li class = "welcome-banner flex-1">
+			<span>Welcome</span><span *ngIf = "userName">, {{userName.toUpperCase()}}</span>
+		</li>
+		<li class = "logout-holder flex-1">
+			<mat-icon class= "logout-icon" title = "Log out" (click) ="logoutApp()">power_settings_new</mat-icon>
+		</li>
+	</ul>
+</div>

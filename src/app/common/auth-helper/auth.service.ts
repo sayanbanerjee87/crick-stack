@@ -33,4 +33,9 @@ export class AuthService{
 			return this.user;
     	}));
     }
+
+    logout(): boolean{
+    	localStorage.removeItem("currentUser");
+    	return true;
+    }
 }

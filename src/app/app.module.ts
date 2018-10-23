@@ -18,6 +18,7 @@ import { ProfileDetail } from './components/profile/profile.component';
 import { RatedPlayers } from './components/ratings/rating.component';
 import { DialogContentDialog } from './components/dialog/dialog.component';
 import { LoginComponent } from './modules/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LoginComponent } from './modules/login/login.component';
     RatedPlayers,
     DialogContentDialog,
     FilterPipe,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
